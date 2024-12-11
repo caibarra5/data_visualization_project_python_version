@@ -6,6 +6,10 @@ import dash_bootstrap_components as dbc
 import base64
 import io
 
+# App initialization
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app.title = "Dynamic Plotting App"
+
 # Load predefined datasets
 def load_datasets():
     # Original datasets
@@ -42,9 +46,6 @@ def load_datasets():
 original_datasets, datasets = load_datasets()
 
 
-# App initialization
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-app.title = "Dynamic Plotting App"
 
 # App layout
 app.layout = dbc.Container([
