@@ -906,6 +906,7 @@ def update_dataset_info(selected_dataset):
     )
 
 
+server = app.server  # Expose the Flask server as a WSGI application for Gunicorn
 
 
 if __name__ == "__main__":
